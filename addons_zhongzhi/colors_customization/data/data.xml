@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+    <!-- IT LIBERTAS -->
+    <record model="colors.customization.theme" id="itlibertas_theme">
+      <field name="name">IT Libertas</field>
+      <field name="default_for_new_users" eval='1'/>
+      <!-- Top Menu -->
+      <field name="navbar_color">#EEEEF5</field>
+      <field name="navbar_border_color">#BCE8F1</field>
+      <field name="menu_font_color">#428BCA</field>
+      <field name="navbar_active_item_font_color">#FFFFFF</field>
+      <field name="menu_active_item_color">#428BCA</field> 
+      <field name="navbar_hover_font_color">#121212</field>
+      <field name="navbar_hover_background_color">#FFFFFF</field> 
+      <!-- Left Menu -->
+      <field name='left_bar_menu_text'>#0AC2FF</field>
+      <field name="left_bar_color">#F0F7FF</field>
+      <field name="left_bar_category_font_color">#428BCA</field>
+      <field name="left_bar_font_color">#777777</field>
+      <field name="left_bar_active_item_font_color">#FFFFFF</field>
+      <field name="left_bar_active_item_color">#428BCA</field>
+      <field name="left_bar_hover_font_color">#121212</field>
+      <field name="left_bar_hover_background_color">#FFFFFF</field>
+      <!-- Header Section -->
+      <field name='header_table_color'>#F0F7FF</field>
+      <field name='header_table_color_2'>#EEEEF5</field>
+      <!-- Footer -->
+      <field name="footer_text">Inspired by IT Libertas</field>
+      <field name="footer_url">https://itlibertas.com</field>
+      <field name="footer_color">#31708F</field>
+      <!--Image -->
+      <field name="image" type="base64" file="colors_customization/static/src/img/itl_favicon.png"/>
+      <field name="meta_title">ITL</field>
+    </record>
+    <!-- Froggy -->
+    <record model="colors.customization.theme" id="custom_theme">
+      <field name="name">Froggy</field>
+      <field name="default_for_new_users" eval='0'/>
+      <!-- Top Menu -->
+      <field name="navbar_color">#DBDBDB</field>
+      <field name="navbar_border_color">#9CA8A6</field>
+      <field name="menu_font_color">#39CA64</field>
+      <field name="navbar_active_item_font_color">#006629</field>
+      <field name="menu_active_item_color">#FFFFFF</field> 
+      <field name="navbar_hover_font_color">#080808</field>
+      <field name="navbar_hover_background_color">#DEFFAD</field> 
+      <!-- Left Menu -->
+      <field name='left_bar_menu_text'>#1F471D</field>
+      <field name="left_bar_color">#DBDBDB</field>
+      <field name="left_bar_category_font_color">#4BA816</field>
+      <field name="left_bar_font_color">#39CA64</field>
+      <field name="left_bar_active_item_font_color">#006629</field>
+      <field name="left_bar_active_item_color">#FFFFFF</field>
+      <field name="left_bar_hover_font_color">#080808</field>
+      <field name="left_bar_hover_background_color">#DEFFAD</field>
+      <!-- Header Section -->
+      <field name='header_table_color'>#DBDBDB</field>
+      <field name='header_table_color_2'>#B3C9B4</field>
+      <!-- Footer -->
+      <field name="footer_text">Inspired by IT Libertas</field>
+      <field name="footer_url">https://itlibertas.com</field>
+      <field name="footer_color">#006629</field>
+      <!--Image -->
+      <field name="image" type="base64" file="colors_customization/static/src/img/frog-favicon.png"/>
+      <field name="meta_title">ITL</field>
+    </record>
+    <!-- POPPY -->
+    <record model="colors.customization.theme" id="poppy_theme">
+      <field name="name">Poppy</field>
+      <field name="default_for_new_users" eval='0'/>
+      <!-- Top Menu -->
+      <field name="navbar_color">#DB0000</field>
+      <field name="navbar_border_color">#A80000</field>
+      <field name="navbar_active_item_font_color">#CABCBC</field>
+      <field name="menu_font_color">#000000</field>
+      <!-- Left Menu -->
+      <field name='left_bar_menu_text'>#000000</field>
+      <field name="left_bar_color">#3B3B3B</field>
+      <field name="left_bar_font_color">#DB0000</field>
+      <field name="left_bar_category_font_color">#FF0000</field>
+      <field name="left_bar_active_item_color">#000000</field>
+      <!-- Footer -->
+      <field name="footer_text">Inspired by IT Libertas</field>
+      <field name="footer_url">https://itlibertas.com</field>
+      <field name="footer_color">#A80000</field>
+      <!--Image -->
+      <field name="image" type="base64" file="colors_customization/static/src/img/poppy-favicon.png"/>
+      <field name="meta_title">ITL</field>
+    </record>
+</data>
+</openerp>	

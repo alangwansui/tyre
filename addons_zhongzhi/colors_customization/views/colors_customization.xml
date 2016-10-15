@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="colors_customization_tree_view" model="ir.ui.view">
+            <field name="name">Themes</field>
+            <field name="model">colors.customization.theme</field>
+            <field name="arch" type="xml">
+                <tree string="Themes" colors="blue:default_for_new_users==True">
+                    <field name="name"/>
+                    <field name='default_for_new_users'/>
+                </tree>
+            </field>
+        </record>        
+
+        <record id="colors_customization_form_view" model="ir.ui.view">
+            <field name="name">Custom color theme</field>
+            <field name="model">colors.customization.theme</field>
+            <field name="arch" type="xml">
+                <form string="Create color theme">
+                   
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name" />
+                            </h1>
+                            <div groups='base.group_erp_manager'>
+                                <field name='default_for_new_users' class='oe_inline' options='{"no_create":True,"no_quick_create":True}'/>
+                                <label for='default_for_new_users'/>
+                                <field name='users' widget='many2many_tags' placeholder='Assign this theme to users'/>
+                            </div>
+                        </div>
+                        <div class='oe_right oe_button_box' name='buttons' groups='base.group_erp_manager'>
+                            <button class="oe_inline oe_stat_button" icon="fa-users" type="object" name="assign_to_all_users" string='Assign to all users'
+                            help='Assign this theme to all users for all companies. Other themes would be used by any user after this operation'>
+                                
+                            </button>
+                        </div>
+                        <group>
+                            <group string='Top Panel'>
+                                <field name="navbar_color" widget="color"/>
+                                <field name="navbar_border_color" widget="color"/>
+                                <field name="menu_font_color" widget="color"/>
+                                <field name="navbar_active_item_font_color" widget="color"/> 
+                                <field name="menu_active_item_color" widget="color"/> 
+                                <field name="navbar_hover_font_color" widget="color"/> 
+                                <field name="navbar_hover_background_color" widget="color"/> 
+                            </group>
+                            <group string='Left Panel'>
+                                <field name="left_bar_color" widget="color"/>
+                                <field name='left_bar_menu_text' widget="color"/>
+                                <field name="left_bar_category_font_color" widget="color"/>
+                                <field name="left_bar_font_color" widget="color"/>
+                                <field name="left_bar_active_item_font_color" widget="color"/>
+                                <field name="left_bar_active_item_color" widget="color"/>
+                                <field name="left_bar_hover_font_color" widget="color"/>
+                                <field name="left_bar_hover_background_color" widget="color"/>
+                            </group>
+                            <label for='header_table_color'/>
+                            <div >
+                                <field name='header_table_color' widget="color" class='oe_inline'/>
+                                -
+                                <field name='header_table_color_2' widget="color" class='oe_inline'/>
+                            </div>
+                            <field name="css" col='6' colspan='6' nolabel='1' invisible='1'/>                        
+                            <group string='Meta'>
+                                <field name='meta_title' placeholder='e.g. YourComp'/>
+                            </group>
+                            <group string='Footer'>
+                                <field name='footer_text' placeholder='Instead of standard Powered by..'/>
+                                <field name='footer_url' placeholder='http://yourcom.ex.com. HTTP or HTTPS are required!' attrs="{'invisible':['|',('footer_text','=',False),('footer_text','=','')]}"/>
+                                <field name="footer_color" widget="color" attrs="{'invisible':['|',('footer_text','=',False),('footer_text','=','')]}"/>
+                            </group>
+                            <group string='Favicon'>
+                                <div class='oe_left'>
+                                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium"}'/>
+                                </div>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string='User Menu' groups='base.group_erp_manager'>
+                                <group>
+                                    <field name='remove_menu_documentation'/>
+                                    <field name='remove_menu_help'/>
+                                    <field name='remove_menu_about'/>
+                                    <field name='remove_menu_preferences'/>
+                                    <field name='remove_menu_account'/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <div class='oe_clear'/>
+                   
+
+                </form>
+            </field>
+        </record>
+
+        <record id="action_colors_customization" model="ir.actions.act_window">
+            <field name="name">Themes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">colors.customization.theme</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="colors_customization_root" name="Interface" parent="base.menu_administration"/>
+
+        <menuitem id="colors_customization_config" name="Themes" parent="colors_customization.colors_customization_root" action="action_colors_customization" sequence="15" />
+
+
+    </data>
+</openerp>

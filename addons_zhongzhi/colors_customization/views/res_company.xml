@@ -1,0 +1,52 @@
+<openerp>
+<data>
+
+    <!--jon
+    <record id="view_company_form" model="ir.ui.view">
+        <field name="name">res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <notebook position='inside'>
+                <page string='Interface'>
+                    <group>
+                        <field name='user_own_theme'/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    -->
+
+    <!--<function model="res.groups" name="update_user_groups_view" />-->
+
+    <!-- jon
+    <record id="view_users_form_theme_simple" model="ir.ui.view">
+        <field name="name">res.users.preferences.theme</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="company_color_theme" readonly="0" options='{"no_create":True,"no_quick_create":True}' attrs="{'invisible':[('user_own_theme','=',False)]}"/>
+                    <field name='user_own_theme' invisible='1'/>
+                </xpath>               
+            </data>
+        </field>
+    </record>
+    -->
+    <!--jon
+    <record id="view_users_form_theme" model="ir.ui.view">
+        <field name="name">res.users.theme</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="tz" position="after">
+                <field name="company_color_theme" readonly="0" options='{"no_create":True,"no_quick_create":True}'/>
+            </field>
+        </field>
+    </record>
+    -->
+
+</data>
+</openerp>

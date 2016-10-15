@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_interface_config" model="ir.ui.view">
+            <field name="name">interface settings</field>
+            <field name="model">interface.conf</field>
+            <field name="arch" type="xml">
+                <form string="Interface Settings" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" special='cancel' class="oe_link"/>
+                    </header>
+                    <div name="inter_settings_1">
+                        <separator string="User Preferences"/>
+                        <group>
+                            <field name='company_id' groups="base.group_multi_company"/>
+                            <field name='user_own_theme' invisible="1"/>
+                        </group>
+                        <separator string="Mail Theme"/>
+                        <button name='return_template' type='object' string='Modify' class='oe_highlight'/>
+                        <div style='padding:3%'>
+                            <ul>
+                                <li>Be cautious when removing template components. Do not clear the template! It may make all the notifications empty!</li>
+                                <li>If your Odoo has multiple languages, do not forget to change translations of templates!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="action_interface_config" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">interface.conf</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+
+        <menuitem id="interface_settings_config" name="Settings" parent="colors_customization.colors_customization_root" action="action_interface_config" sequence="25" />
+
+
+
+    </data>
+</openerp>

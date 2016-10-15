@@ -1,0 +1,6 @@
+.oe_kanban_group_title_vertical {
+    writing-mode: inherit ! important;
+}
+.openerp .oe-control-panel .oe-view-title {
+  background-color: inherit ! important;
+}

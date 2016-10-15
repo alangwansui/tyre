@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+<!--<t t-name="UserMenu.about" t-extend="UserMenu.about">
+    <t t-jquery='div[class="col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8 user-details"]' t-operation="replace"/>
+</t>-->
+<t t-name="UserMenu" t-extend="UserMenu">
+    <t t-jquery='a[data-menu="about"]' t-operation="replace">
+        <a href="?debug" data-menu="about">Developer Mode</a>
+    </t>
+</t>
+<t t-name="announcement_bar" t-extend="WebClient.announcement_bar" >
+    <t t-jquery="td.announcement_bar" t-operation="replace">
+    </t>
+</t>
+</templates>
