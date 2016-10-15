@@ -1,2 +1,2 @@
 # tyre
-odoo tyre
+zhongzhi tyre
